@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Registro from "./pages/registro";
 import RecuperarContrasena from "./pages/RecuperarContraseña";
@@ -18,4 +17,3 @@ function App() {
 }
 
 export default App;
-
