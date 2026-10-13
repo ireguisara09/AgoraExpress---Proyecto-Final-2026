@@ -1,3 +1,4 @@
+/* CSS DE LOGIN */
 :root {
   --verde: #1b8a4e;
   --naranja: #f5a31a;
@@ -11,7 +12,13 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -22,39 +29,39 @@ body {
 
 .navbar {
   display: flex;
-  justify-content: space-between; /* Logo a la izquierda, registro a la derecha */
+  justify-content: space-between;
   align-items: center;
-  height: 64px;
-  padding: 0 24px;
+  height: 72px;
+  padding: 0 32px;
   background-color: #ffffff;
   border-bottom: 1px solid var(--borde);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
-.navbar__logo {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  text-decoration: none;
-}
-
 .logo-texto {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 700;
   letter-spacing: -0.5px;
 }
 
-.logo-agora   { color: var(--verde); }
-.logo-express { color: var(--naranja); }
+.logo-agora {
+  color: var(--verde);
+}
+
+.logo-express {
+  color: var(--naranja);
+}
 
 .logo-icono {
-  height: 54px;
+  height: 46px;
   width: auto;
+  margin-right: 1300px;
 }
 
 .navbar__registro {
   font-size: 16px;
   color: var(--gris);
+  white-space: nowrap;
 }
 
 .navbar__registro a {
@@ -69,96 +76,111 @@ body {
   color: var(--verde);
 }
 
-/* ===== Contenido principal: imagen + formulario ===== */
+
 .login {
-  display: flex;                       /* Imagen y formulario en fila */
-  min-height: calc(100vh - 64px);      /* Ocupa lo que queda de pantalla bajo la barra */
+  display: flex;
+  height: calc(100vh - 72px);
+  min-height: 640px;
 }
 
-/* ----- Lado izquierdo: imagen ----- */
+
 .login__imagen {
-  flex: 0 0 38%;                       /* Ocupa el 38% del ancho, como en el modelo */
+  flex: 0 0 52%;
+  overflow: hidden;
 }
 
 .login__imagen img {
-  width: 100%;
+  width: 120%;
   height: 100%;
-  object-fit: cover;                   /* Rellena el espacio sin deformar la foto */
+  object-fit: cover;
+  object-position: center;
   display: block;
+  image-rendering: auto;
 }
 
-/* ----- Lado derecho: contenedor del formulario ----- */
 .login__contenido {
-  flex: 1;                             /* Toma el espacio restante */
+  flex: 1;
+  min-width: 0;
   display: flex;
-  align-items: center;                 /* Centra la caja verticalmente */
-  padding: 32px 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 56px;
+  overflow-y: auto;
 }
 
 .login__caja {
   width: 100%;
-  max-width: 470px;                    /* Ancho máximo del formulario */
+  max-width: 800px;
 }
 
-/* ----- Títulos ----- */
+
+.login__bienvenida {
+  display: none !important;
+}
+
+
+.enlaces-movil {
+  display: none;
+}
+
+
 .login__titulo {
-  font-size: 36px;
-  font-weight: 400;
+  font-size: 60px;
+  font-weight: 500;
   color: #000000;
   line-height: 1.1;
 }
 
 .login__subtitulo {
-  font-size: 16px;
+  font-size: 20px;
   color: var(--gris);
-  margin-bottom: 24px;
+  margin-bottom: 35px;
 }
 
-/* ===== Formulario ===== */
+
 .formulario {
   display: flex;
   flex-direction: column;
 }
 
 .formulario__label {
-  font-size: 17px;
+  font-size: 20px;
   color: var(--gris);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
-/* Contenedor de cada input (borde redondeado con icono) */
 .campo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  height: 46px;
-  padding: 0 14px;
-  margin-bottom: 18px;
+  gap: 14px;
+  height: 60px;
+  padding: 0 18px;
+  margin-bottom: 26px;
   border: 1px solid var(--borde-campo);
-  border-radius: 10px;
+  border-radius: 12px;
   background-color: #ffffff;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-/* Resalta el campo cuando el usuario escribe dentro */
 .campo:focus-within {
   border-color: var(--verde);
   box-shadow: 0 0 0 3px rgba(27, 138, 78, 0.15);
 }
 
 .campo__icono {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;                      /* El icono no se encoge */
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
   color: #333333;
 }
 
 .campo input {
   flex: 1;
+  min-width: 0;
   border: none;
-  outline: none;                       /* Quita el borde azul por defecto */
+  outline: none;
   font-family: inherit;
-  font-size: 16px;
+  font-size: 19px;
   color: #333333;
   background: transparent;
 }
@@ -167,7 +189,6 @@ body {
   color: #8a8a8a;
 }
 
-/* Botón del ojo (mostrar/ocultar contraseña) */
 .campo__ojo {
   display: flex;
   align-items: center;
@@ -178,31 +199,32 @@ body {
 }
 
 .campo__ojo svg {
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
 }
 
-/* ===== Fila: recordarme + olvidaste contraseña ===== */
 .formulario__opciones {
   display: flex;
-  justify-content: space-between;      /* Uno a cada lado */
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 22px;
-  font-size: 15px;
+  gap: 12px;
+  margin-bottom: 30px;
+  font-size: 18px;
   color: var(--gris);
 }
 
 .recordarme {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   cursor: pointer;
 }
 
 .recordarme input {
-  width: 20px;
-  height: 20px;
-  accent-color: var(--verde);          /* Color verde al marcar el checkbox */
+  width: 24px;
+  height: 24px;
+  accent-color: var(--verde);
   cursor: pointer;
 }
 
@@ -217,69 +239,275 @@ body {
   text-decoration: underline;
 }
 
-/* ===== Botón verde "Iniciar sesión" ===== */
 .boton-verde {
-  height: 42px;
+  height: 58px;
   border: none;
-  border-radius: 21px;                 /* Bordes totalmente redondeados */
+  border-radius: 29px;
   background-color: var(--verde);
   color: #ffffff;
   font-family: inherit;
-  font-size: 18px;
+  font-size: 22px;
   cursor: pointer;
   transition: background-color 0.2s, transform 0.1s;
 }
 
 .boton-verde:hover {
-  background-color: #157a43;           /* Verde un poco más oscuro */
+  background-color: #157a43;
 }
 
 .boton-verde:active {
-  transform: scale(0.99);              /* Efecto de "presionado" */
+  transform: scale(0.99);
 }
 
-/* ===== Responsive ===== */
 
-/* Tablets y pantallas medianas: la imagen se reduce */
-@media (max-width: 900px) {
-  .login__imagen {
-    flex: 0 0 30%;
+/* App.css: pega esto ANTES del bloque RESPONSIVE */
+.campo--error {
+  border-color: #d93025;
+  margin-bottom: 6px;
+}
+
+.campo--error:focus-within {
+  border-color: #d93025;
+  box-shadow: 0 0 0 3px rgba(217, 48, 37, 0.15);
+}
+
+.campo__error {
+  display: block;
+  color: #d93025;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.boton-verde:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*RESPONSIVE*/
+
+@media (max-width: 1400px) {
+  .logo-icono {
+    margin-right: 0;
   }
 }
 
-/* Celulares: se oculta la imagen y el formulario ocupa todo el ancho */
-@media (max-width: 700px) {
+@media (max-width: 1200px) {
+  .login__imagen {
+    flex: 0 0 42%;
+  }
+
+  .login__contenido {
+    padding: 32px 36px;
+  }
+
+  .login__titulo {
+    font-size: 48px;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .login {
+    flex-direction: column;
+    height: auto;
+    min-height: 0;
+  }
+
+  .login__imagen {
+    flex: none;
+    width: 100%;
+    height: 240px;
+  }
+
+  .login__imagen img {
+    width: 100%;
+    height: 100%;
+    object-position: center 25%;
+  }
+
+  .login__contenido {
+    flex: none;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 32px 28px 48px;
+    overflow-y: visible;
+  }
+
+  .login__caja {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .login__titulo {
+    font-size: 40px;
+  }
+}
+
+
+@media (max-width: 600px) {
   .navbar {
-    padding: 0 12px;
+    height: 60px;
+    padding: 0 14px;
+    gap: 8px;
+    justify-content: center;
   }
 
   .logo-texto {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .logo-icono {
-    height: 34px;
+    height: 30px;
   }
 
   .navbar__registro {
-    font-size: 13px;
+    display: none;
   }
+
 
   .login__imagen {
     display: none;
   }
 
+  .login {
+    min-height: calc(100vh - 60px);
+  }
+
+
   .login__contenido {
-    padding: 24px 20px;
+    flex: 1;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+  }
+
+  .login__caja {
+    margin: 0 auto;
+  }
+
+
+  .login__bienvenida {
+    display: block !important;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--gris-oscuro);
+    margin-bottom: 28px;
   }
 
   .login__titulo {
-    font-size: 30px;
+    font-size: 32px;
   }
 
-  .formulario__opciones {
-    flex-direction: column;            /* Apila "Recordarme" y "Olvidaste..." */
-    align-items: flex-start;
+  .login__subtitulo {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .formulario__label {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .campo {
+    height: 52px;
+    padding: 0 14px;
+    margin-bottom: 16px;
     gap: 10px;
+  }
+
+  .campo__icono {
+    width: 22px;
+    height: 22px;
+  }
+
+  .campo input {
+    font-size: 16px;
+  }
+
+  .campo__ojo svg {
+    width: 24px;
+    height: 24px;
+  }
+
+
+  .formulario__opciones {
+    font-size: 14px;
+    margin-bottom: 22px;
+    gap: 10px;
+  }
+
+  .formulario__opciones .olvido {
+    display: none;
+  }
+
+  .recordarme input {
+    width: 20px;
+    height: 20px;
+  }
+
+  .boton-verde {
+    height: 50px;
+    border-radius: 25px;
+    font-size: 18px;
+  }
+
+
+  .enlaces-movil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-top: 22px;
+  }
+
+  .enlaces-movil__olvido {
+    font-size: 15px;
+    color: var(--gris);
+    text-decoration: none;
+  }
+
+  .enlaces-movil__olvido:hover {
+    color: var(--verde);
+    text-decoration: underline;
+  }
+
+  .enlaces-movil__registro {
+    font-size: 15px;
+    color: var(--gris);
+  }
+
+  .enlaces-movil__registro a {
+    color: var(--verde);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .enlaces-movil__registro a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 380px) {
+  .logo-icono {
+    display: none;
+  }
+
+  .logo-texto {
+    font-size: 20px;
   }
 }

@@ -6,27 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgoraExpress - Iniciar sesión</title>
 
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../App.css">
-    <script type="module" src="/src/main.jsx"></script>
-
-
 </head>
 
 <body>
 
-
     <header class="navbar">
-
 
         <span class="logo-texto">
             <span class="logo-agora">Agora</span><span class="logo-express">Express</span>
         </span>
 
-
         <img src="../assets/LOGO.png" alt="Icono AgoraExpress" class="logo-icono">
-        </a>
 
         <p class="navbar__registro">
             ¿No tienes cuenta?
@@ -35,25 +27,26 @@
 
     </header>
 
-
-
     <main class="login">
+
         <section class="login__imagen">
-            <img src="../assets/decoracion-login.png" alt="Personas trabajando con un computador">
+            <img src="../assets/emprendimiento.avif" alt="Personas trabajando con un computador">
         </section>
 
         <section class="login__contenido">
             <div class="login__caja">
+
+                <p class="login__bienvenida">
+                    Bienvenido a <span class="logo-agora">Agora</span><span class="logo-express">Express</span>
+                </p>
 
                 <h1 class="login__titulo">Iniciar sesión</h1>
                 <p class="login__subtitulo">Ingresa tu cuenta para continuar</p>
 
                 <form class="formulario" action="#" method="post">
 
-                   
                     <label for="correo" class="formulario__label">Correo electrónico</label>
                     <div class="campo">
-                      
                         <svg class="campo__icono" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.5" stroke-linejoin="round">
                             <rect x="2" y="4" width="20" height="16" rx="1" />
@@ -62,10 +55,8 @@
                         <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
                     </div>
 
-                   
                     <label for="contrasena" class="formulario__label">Contraseña</label>
                     <div class="campo">
-                  
                         <svg class="campo__icono" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.5" stroke-linejoin="round">
                             <rect x="5" y="10" width="14" height="11" rx="2" />
@@ -74,7 +65,7 @@
                         </svg>
                         <input type="password" id="contrasena" name="contrasena" placeholder="Ingresa tu contraseña"
                             required>
-                     
+
                         <button type="button" class="campo__ojo" id="btnOjo" aria-label="Mostrar contraseña">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
                                 stroke-linecap="round" stroke-linejoin="round">
@@ -84,7 +75,6 @@
                         </button>
                     </div>
 
-                   
                     <div class="formulario__opciones">
                         <label class="recordarme">
                             <input type="checkbox" name="recordarme">
@@ -93,8 +83,15 @@
                         <a href="recuperar.html" class="olvido">¿Olvidaste tu contraseña?</a>
                     </div>
 
-               
                     <button type="submit" class="boton-verde">Iniciar sesión</button>
+
+                   
+                    <div class="enlaces-movil">
+                        <a href="recuperar.html" class="enlaces-movil__olvido">¿Olvidaste tu contraseña?</a>
+                        <p class="enlaces-movil__registro">
+                            ¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a>
+                        </p>
+                    </div>
 
                 </form>
             </div>
@@ -102,13 +99,7 @@
 
     </main>
 
-
-
-
-
-
-
-
+    <script src="login.js"></script>
 
 </body>
 
