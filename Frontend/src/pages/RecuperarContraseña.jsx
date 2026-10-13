@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./RecuperarContrasena.css";
+import "../styles/RecuperarContraseña.css";
 import logo from "../assets/logo.png";
 
 export default function RecuperarContrasena() {
