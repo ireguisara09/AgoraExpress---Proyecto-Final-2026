@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../styles/RecuperarContraseña.css";
-import logo from "../assets/logo.png";
+import Header from "../components/header";
 
 export default function RecuperarContrasena() {
     const [correo, setCorreo] = useState("");
@@ -10,7 +10,8 @@ const enviar = (e)  => {
 };
 
 return (
-
+    <>
+    <Header />
     <div className="ae-page">
 
         <main className="ae-card">
@@ -34,5 +35,6 @@ return (
         <a href="/login">Volver al inicio de sesión</a>
         </main>
     </div>
+    </>
   );
 }
