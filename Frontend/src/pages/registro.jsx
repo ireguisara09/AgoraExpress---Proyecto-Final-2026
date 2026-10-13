@@ -1,9 +1,15 @@
 import "../styles/Registro.css";
+import Header from "../components/header";
 
 export default function Registro() {
   return (
+    <>
+
+    <Header />
     <main className="registro-page">
+      
       <section className="registro-container">
+        
         <header className="registro-header">
           <h1>Crear cuenta</h1>
           <p>Únete a AgoraExpress y descubre nuevos emprendimientos.</p>
@@ -91,5 +97,6 @@ export default function Registro() {
         </p>
       </section>
     </main>
+    </>
   );
 }
