@@ -1,11 +1,9 @@
 
 .registro-page {
-  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: right;
+  align-items: right;
   padding: 24px;
-  background-color: #f5f7f5;
   font-family: Arial, sans-serif;
 }
 
@@ -13,9 +11,6 @@
   width: 100%;
   max-width: 450px;
   padding: 32px;
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .registro-header {
