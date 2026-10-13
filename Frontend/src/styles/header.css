@@ -1,0 +1,92 @@
+:root {
+  --verde: #1b8a4e;
+  --naranja: #f5a31a;
+  --gris: #6b6b6b;
+  --gris-oscuro: #555555;
+  --borde: #e6e6e6;
+  --borde-campo: #d9d9d9;
+}
+
+.navbar {
+  width: 100%;
+  height: 64px;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--borde);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.logo-texto {
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.logo-agora {
+  color: var(--verde);
+}
+
+.logo-express {
+  color: var(--naranja);
+}
+
+.logo-icono {
+  height: 54px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navbar__registro {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+  color: var(--gris);
+  font-size: 14px;
+}
+
+.navbar__registro a {
+  color: var(--verde);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar__registro a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    padding: 0 12px;
+  }
+
+  .logo-texto {
+    font-size: 20px;
+  }
+
+  .logo-icono {
+    height: 34px;
+  }
+
+  .navbar__registro {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+    font-size: 11px;
+    text-align: right;
+  }
+}
