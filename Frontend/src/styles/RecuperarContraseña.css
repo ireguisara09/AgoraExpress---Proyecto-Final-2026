@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap");
+
+.ae-page {
+    min-height: 100vh;
+    font-family: Nunito, system-ui, sans-serif;
+    background: #fff;
+    --g: #17874f;
+    --navy: #1b2a3a;
+}
+
+.ae-logo {
+    height: 52px;
+}
+
+.ae-header {
+    height: 84px;
+    padding: 0 48px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-bottom: 1px solid #e3e5e8;
+}
+
+.ae-card {
+    max-width: 400px;
+    margin: 90px auto;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.ae-card h1 {
+    margin: 14px 0 8px;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--navy);
+}
+
+.ae-card p {
+    margin: 0 0 28px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #6b7480;
+}
+
+.ae-card form {
+    width: 100%;
+    display: grid;
+    gap: 14px;
+}
+
+.ae-card label { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    height: 52px; 
+    padding: 0 16px; 
+    border: 1px solid #e3e5e8; 
+    border-radius: 10px; 
+    color: var(--navy); 
+}
+
+.ae-card label:focus-within { 
+    border-color: var(--g); 
+    box-shadow: 0 0 0 3px #17874f26; 
+}
+
+.ae-card input { 
+    flex: 1; 
+    border: 0; 
+    outline: 0; 
+    font: inherit; 
+    font-size: 15px; 
+    background: none; 
+}
+
+.ae-card button { 
+    height: 50px; 
+    border: 0; 
+    border-radius: 10px; 
+    background: var(--g); 
+    color: #fff; 
+    font: 700 16px Nunito, sans-serif; 
+    cursor: pointer; 
+}
+
+.ae-card button:hover { 
+    background: #126f41; 
+}
+
+.ae-card a { 
+    margin-top: 22px; 
+    font-size: 14px; 
+    font-weight: 600; 
+    color: var(--g); 
+    text-underline-offset: 3px; 
+}
+
+@media (max-width: 600px) { 
+.ae-header { 
+    padding: 0 20px; 
+} 
+.ae-logo { 
+    height: 40px; 
+} 
+}
