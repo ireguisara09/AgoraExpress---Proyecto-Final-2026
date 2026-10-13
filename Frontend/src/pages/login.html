@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgoraExpress - Iniciar sesión</title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../App.css">
+    <script type="module" src="/src/main.jsx"></script>
+
+
+</head>
+
+<body>
+
+
+    <header class="navbar">
+
+
+        <span class="logo-texto">
+            <span class="logo-agora">Agora</span><span class="logo-express">Express</span>
+        </span>
+
+
+        <img src="../assets/LOGO.png" alt="Icono AgoraExpress" class="logo-icono">
+        </a>
+
+        <p class="navbar__registro">
+            ¿No tienes cuenta?
+            <a href="registro.html">Registrate Aqui!</a>
+        </p>
+
+    </header>
+
+
+
+    <main class="login">
+        <section class="login__imagen">
+            <img src="../assets/decoracion-login.png" alt="Personas trabajando con un computador">
+        </section>
+
+        <section class="login__contenido">
+            <div class="login__caja">
+
+                <h1 class="login__titulo">Iniciar sesión</h1>
+                <p class="login__subtitulo">Ingresa tu cuenta para continuar</p>
+
+                <form class="formulario" action="#" method="post">
+
+                   
+                    <label for="correo" class="formulario__label">Correo electrónico</label>
+                    <div class="campo">
+                      
+                        <svg class="campo__icono" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="1" />
+                            <polyline points="2,5 12,14 22,5" />
+                        </svg>
+                        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                    </div>
+
+                   
+                    <label for="contrasena" class="formulario__label">Contraseña</label>
+                    <div class="campo">
+                  
+                        <svg class="campo__icono" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linejoin="round">
+                            <rect x="5" y="10" width="14" height="11" rx="2" />
+                            <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+                            <circle cx="12" cy="15.5" r="1" fill="currentColor" />
+                        </svg>
+                        <input type="password" id="contrasena" name="contrasena" placeholder="Ingresa tu contraseña"
+                            required>
+                     
+                        <button type="button" class="campo__ojo" id="btnOjo" aria-label="Mostrar contraseña">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z" />
+                                <circle cx="12" cy="12" r="3.2" />
+                            </svg>
+                        </button>
+                    </div>
+
+                   
+                    <div class="formulario__opciones">
+                        <label class="recordarme">
+                            <input type="checkbox" name="recordarme">
+                            <span>Recordarme</span>
+                        </label>
+                        <a href="recuperar.html" class="olvido">¿Olvidaste tu contraseña?</a>
+                    </div>
+
+               
+                    <button type="submit" class="boton-verde">Iniciar sesión</button>
+
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
