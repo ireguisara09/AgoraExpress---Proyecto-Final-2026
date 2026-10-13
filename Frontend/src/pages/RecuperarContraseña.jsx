@@ -10,10 +10,8 @@ const enviar = (e)  => {
 };
 
 return (
+
     <div className="ae-page">
-        <header className="ae-header">
-            <img src={logo} alt="AgoraExpress" className="ae-logo"/>
-        </header>
 
         <main className="ae-card">
             <svg width="150" height="80" viewBox="0 0 150 80" fill="none" stroke="#17874f" strokeWidth="2.5" strokeLinecap="round">
