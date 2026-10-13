@@ -1,4 +1,3 @@
-
 import "../styles/Registro.css";
 
 export default function Registro() {

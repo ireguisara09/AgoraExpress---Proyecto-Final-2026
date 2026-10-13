@@ -1,0 +1,137 @@
+
+.registro-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background-color: #f5f7f5;
+  font-family: Arial, sans-serif;
+}
+
+.registro-container {
+  width: 100%;
+  max-width: 450px;
+  padding: 32px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.registro-header {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.registro-header h1 {
+  margin: 0 0 10px;
+  color: #237a35;
+  font-size: 28px;
+}
+
+.registro-header p {
+  margin: 0;
+  color: #666666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.registro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group label {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5d1;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #39a845;
+  box-shadow: 0 0 0 3px rgba(57, 168, 69, 0.12);
+}
+
+.form-group input::placeholder {
+  color: #999999;
+}
+
+.registro-button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 4px;
+  border: none;
+  border-radius: 8px;
+  background-color: #39a845;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.registro-button:hover {
+  background-color: #2e8b38;
+}
+
+.registro-button:focus-visible {
+  outline: 3px solid #237a35;
+  outline-offset: 3px;
+}
+
+.registro-login {
+  margin: 24px 0 0;
+  color: #666666;
+  font-size: 14px;
+  text-align: center;
+}
+
+.registro-login a {
+  color: #237a35;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.registro-login a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .registro-page {
+    padding: 16px;
+  }
+
+  .registro-container {
+    padding: 24px 20px;
+  }
+
+  .registro-header h1 {
+    font-size: 24px;
+  }
+
+  .registro-form {
+    gap: 16px;
+  }
+}
